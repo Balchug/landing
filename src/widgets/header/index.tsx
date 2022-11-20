@@ -13,16 +13,15 @@ const containerStyles = {
 
 }
 
-const Header = (props: Props) => {
+const Header = () => {
   return <>
   <CssBaseline />
-  <ElevationScroll {...props}>
+  <ElevationScroll>
     <AppBar>
       <Container >
         <Toolbar sx={containerStyles}>
           <Logo />
-
-        <NavButtons />
+          <NavButtons />
         </Toolbar>
       </Container>
     </AppBar>
