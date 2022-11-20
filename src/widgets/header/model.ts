@@ -19,6 +19,7 @@ export function ElevationScroll(props: Props) {
 
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
-    // color: trigger ? 'primary': 'transparent',
+    //color: trigger ? 'primary': 'transparent',
+    dark: !!trigger
   });
 }
