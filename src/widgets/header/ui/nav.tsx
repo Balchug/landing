@@ -1,6 +1,6 @@
 import React from 'react';
 import  styled from 'styled-components'
-import { Link, animateScroll as scroll } from "react-scroll"
+import { Link } from "react-scroll"
 
 
 
@@ -20,7 +20,8 @@ const StyledLink = styled(Link)`
   &.active { 
     font-size: 1.3rem;
     font-weight: bold;
-    color: red;
+    text-decoration: underline;
+    
   }
 `
 

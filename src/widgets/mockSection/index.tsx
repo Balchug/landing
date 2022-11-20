@@ -2,15 +2,14 @@ import React from 'react';
 import styled from 'styled-components'
 
 
-
 interface IProps {
   title: string
   id?: string
 }
 
 const StyledDiv = styled.div`
-  min-height: 70vh;
-  border: 5px solid red;
+  min-height: 75vh;
+  border: 1px solid red;
 
 `
 

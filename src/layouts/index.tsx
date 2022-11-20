@@ -18,11 +18,10 @@ const theme = createTheme({
 const Layout = ({children}: LayoutProps) => {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+      <GlobalStyle />
         { children }
       </ThemeProvider>
-    
     </>
   )
 }
