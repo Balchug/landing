@@ -34,10 +34,14 @@ const config: GatsbyConfig = {
         {
           name: 'Roboto',
           file: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&display=swap",
+        },
+        {
+          name: 'Inter',
+          file: "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&display=swap"
         }
       ],
     },
   },]
-};
+}
 
-export default config;
+export default config

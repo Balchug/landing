@@ -13,12 +13,12 @@ const sections = [
 
 
 const StyledLink = styled(Link)`
-  padding: 15px;
+  padding: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   cursor: pointer;
   &.active { 
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-decoration: underline;
     
@@ -38,7 +38,7 @@ const NavButtons = () => {
                 offset={-70}
                 duration={500}
               >
-                {section.text}
+                { section.text }
               </StyledLink>)} 
   </ nav>)
 }

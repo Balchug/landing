@@ -1,18 +1,38 @@
 
 import React from 'react'
 import styled from 'styled-components'
+import { StaticImage } from 'gatsby-plugin-image'
 
-const LogoWrapper = styled.div`
-  font-size: 30px;
-  font-family: Sans;
-  margin: 10px;
-  font-weight:800;
+
+
+const StyledTitle = styled.div`
+  font-size: 32px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  color: #B58C68;
+`
+
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
 `
 
 
-
 const Logo = () => (
-  <LogoWrapper>BALCHUG tech</LogoWrapper>
+  <StyledWrapper>
+    <StaticImage 
+      src="../../../images/logo.png"
+      alt="logo"
+      height="33"
+      center
+    />
+    <StyledTitle>
+     { 'БАЛЧУГ: ТОРГОВЫЙ ПОРТАЛ' }
+    </StyledTitle>
+  </StyledWrapper>
+  
 )
 
 export default Logo
