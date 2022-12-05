@@ -1,3 +1,4 @@
 import HorizontalLines from './horizontalLines'
+import SectionTitle from './sectionTitle'
 
-export {HorizontalLines}
+export {HorizontalLines, SectionTitle}

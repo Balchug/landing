@@ -7,12 +7,12 @@ import { HorizontalLines} from '~/shared/ui'
 
 
 const StyledHomeSection = styled.section`
-  min-height: 70vh;
   background-image: url(patternBG.png);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
-  border-bottom-right-radius: 250;
+  padding-bottom: 120px;
+  border-bottom-right-radius: 120px;
   background-color: ${props => props.theme.palette.primary.main  }
 `
 
@@ -39,10 +39,26 @@ const FeatureList = styled.div`
   font-size: 1.7rem;
   font-weight: 600;
 `
+const AdditionalFeatures = styled.div`
+  align-self: end;
+  max-width: 70%;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: right;
+`
+const Comment = styled.div`
+  align-self: end;
+  max-width: 60%;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: right;
+`
 
 
-const HomeSection = ({ id, theme }: ISectionProps) =>(
-  <StyledHomeSection id={id} theme={theme}>
+const HomeSection = ({ id, theme }: ISectionProps) => {
+  return (<StyledHomeSection id={id} theme={theme}>
       <Container sx={containerStyles}>
         <HorizontalLines color='white'/>
         <DescriptionSection>
@@ -58,9 +74,15 @@ const HomeSection = ({ id, theme }: ISectionProps) =>(
             <li>Управленческие отчеты</li>
           </ul>
         </FeatureList>
+        <AdditionalFeatures>
+           И другие функции программы позволят в комплексе автоматизировать задачи управленческого учета, анализа и планирования
+        </AdditionalFeatures>
+        <Comment>
+          Программа разработана с использованием «1С:Библитека стандартных подсистем»
+        </Comment>
       </Container>
-    </StyledHomeSection>
-    )
+    </StyledHomeSection>)
+}
 
 
 
