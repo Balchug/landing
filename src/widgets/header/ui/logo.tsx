@@ -25,8 +25,7 @@ const Logo = () => (
     <StaticImage 
       src="../../../images/logo.png"
       alt="logo"
-      height="33"
-      center
+      height={ 33 }
     />
     <StyledTitle>
      { 'БАЛЧУГ: ТОРГОВЫЙ ПОРТАЛ' }

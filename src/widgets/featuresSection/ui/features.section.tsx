@@ -1,9 +1,9 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from '@mui/material'
+import { Container, Card, CardContent, Typography } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
-import { SectionTitle, HorizontalLines } from '~/shared/ui'
+import { SectionTitle } from '~/shared/ui'
 import { StaticImage } from "gatsby-plugin-image"
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
@@ -20,24 +20,47 @@ const containerStyles = {
   gap: '10px',
 }
 
-const slides = [
-  {name: '01.png', legend: '01-description'},
-  {name: '02.png', legend: '01-description'},
-  {name: '03.png', legend: '01-description'},
-  {name: '04.png', legend: '01-description'},
-  {name: '05.png', legend: '01-description'},
-  {name: '06.png', legend: '01-description'},
-  {name: '07.png', legend: '01-description'},
-  {name: '08.png', legend: '01-description'},
-  {name: '09.png', legend: '01-description'},
-  {name: '10.png', legend: '01-description'},
-  {name: '11.png', legend: '01-description'},
-  {name: '12.png', legend: '01-description'},
-  {name: '13.png', legend: '01-description'},
-  {name: '14.png', legend: '01-description'},
-  {name: '15.png', legend: '01-description'},
-  {name: '16.png', legend: '01-description'},
+
+const FeaturesWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px;
+  overflow-x: auto;
+  
+  justify-content: space-evenly;
+`
+
+const features = [
+  { 
+    title: 'Планирование', 
+    content: `Планируйте объем продаж и приход денежных средств на неделю, месяц или год. 
+    В разрезе контрагентов и товаров. 
+    Сравнивайте с фактом продаж с помощью консолидированного отчета.` 
+  },
+  { 
+    title: 'Ценовые модели', 
+    content: `Создавайте и фиксируйте ценовую политику компании.
+    Создавайте ценовые модели под каждого контрагента.` 
+  },
+  { 
+    title: 'Маркетинг', 
+    content: `Заводите маркетинговые активности для разных каналов продаж (сеть, розница, HoReCa).` 
+  },
+  { 
+    title: 'Учет POSM - материалов', 
+    content: `Планируйте объем продаж и приход денежных средств на неделю, месяц или год.
+    В разрезе контрагентов и товаров.
+    Сравнивайте с фактом продаж с помощью консолидированного отчета.` 
+  },
+  { 
+    title: 'Листинг', 
+    content: `Заводите контракты с различными коммерческими условиями и объединяйте их в листинг, чтобы проанализировать коммерцию по всей сети.` 
+  }
 ]
+
+
 
 
 const HomeSection = ({ id, theme }: ISectionProps) => {
@@ -45,7 +68,7 @@ const HomeSection = ({ id, theme }: ISectionProps) => {
       <Container sx={containerStyles}>
         {/* <HorizontalLines color={ theme?.palette.primary.main || 'transparent' }/> */}
         <SectionTitle>Возможности</SectionTitle>
-        <Carousel>
+        <Carousel autoPlay={true} infiniteLoop={true}>
            <div>  <StaticImage src={ `../../../images/features/01.png` } alt='Описание'/> </div>
            <div>  <StaticImage src={ `../../../images/features/02.png` } alt='Описание'/> </div>
            <div>  <StaticImage src={ `../../../images/features/03.png` } alt='Описание'/> </div>
@@ -63,6 +86,23 @@ const HomeSection = ({ id, theme }: ISectionProps) => {
            <div>  <StaticImage src={ `../../../images/features/15.png` } alt='Описание'/> </div>
            <div>  <StaticImage src={ `../../../images/features/16.png` } alt='Описание'/> </div>
         </Carousel>
+        <FeaturesWrapper>
+          { features.map(block => (
+                <Card sx={{width: '250px'}}>
+                  <CardContent> 
+                    <Typography variant="h5" component="div" sx={{textAlign: 'center' }}>  
+                      { block.title }
+                    </Typography>
+                    <Typography sx={{ my: 1.5, textAlign: 'center' }} color="text.secondary">
+                      { block.content }
+                    </Typography>
+                    <Typography variant="body2">
+                    
+                    </Typography>
+                  </CardContent>
+                </Card>
+            ))}
+        </FeaturesWrapper>
       </Container>
     </StyledHomeSection>)
 }
