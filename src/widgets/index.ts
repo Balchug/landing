@@ -5,5 +5,6 @@ import { HomeSection } from './homeSection'
 import { FeaturesSection } from './featuresSection'
 import { TariffsSection } from './tariffsSection'
 import { ServicesSection } from './serviceSection'
+import { ReviewsSection } from './reviewsSection'
 
-export { Header, MockSection, Footer, HomeSection, FeaturesSection, TariffsSection, ServicesSection}
+export { Header, MockSection, Footer, HomeSection, FeaturesSection, TariffsSection, ServicesSection, ReviewsSection}

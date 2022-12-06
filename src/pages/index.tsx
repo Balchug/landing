@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { Header, MockSection, Footer, HomeSection, FeaturesSection, TariffsSection, ServicesSection } from '~/widgets'
+import { Header, Footer, HomeSection, FeaturesSection, TariffsSection, ServicesSection, ReviewsSection } from '~/widgets'
 
 import { useTheme } from '@mui/material'
 const IndexPage: React.FC<PageProps> = () => {
@@ -11,6 +11,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <HomeSection  id="home" theme={theme}/>
     <FeaturesSection id="functions"/>
     <ServicesSection id="services" theme={theme}/>
+    <ReviewsSection id="reviews" theme={theme}/>
     <TariffsSection id="tariffs" theme={theme}/>
     <Footer />
 

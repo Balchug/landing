@@ -11,7 +11,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const StyledHomeSection = styled.section`
   padding-top: 40px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 `
 
 const containerStyles = {

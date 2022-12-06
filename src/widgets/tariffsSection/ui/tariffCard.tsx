@@ -16,8 +16,6 @@ const CardWrapper = styled.div`
   max-width: 450px;
   align-content: center;
   padding-bottom: 50px;
-  
-  
 `
 
 const Title = styled.div`

@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
-import { HorizontalLines , SectionTitle } from '~/shared/ui'
+import { SectionTitle } from '~/shared/ui'
 
 
 const StyledHomeSection = styled.section`
@@ -11,7 +11,7 @@ const StyledHomeSection = styled.section`
   /* background-repeat: no-repeat;
   background-position: top left;
   background-size: cover; */
-  padding-bottom: 40px;
+  padding-bottom: 120px;
   /* border-bottom-right-radius: 120px; */
   /* background-color: ${props => props.theme.palette.primary.main  } */
 `
@@ -32,7 +32,7 @@ const StyledUl = styled.ul`
 `
 
 const StyledLi = styled.li`
-  margin: 12px;
+  margin: 10px;
 `
 
 
