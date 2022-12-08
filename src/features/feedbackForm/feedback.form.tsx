@@ -18,8 +18,8 @@ const FeedbackForm = () => {
       phone: null,
       message: null,
     },
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
+    onSubmit: _values => {
+      alert('Cообщение не отправлено!')
     },
   })
   return (

@@ -1,9 +1,8 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
-import { HorizontalLines} from '~/shared/ui'
+import { HorizontalLines } from '~/shared/ui'
 
 
 const StyledHomeSection = styled.section`
@@ -13,7 +12,7 @@ const StyledHomeSection = styled.section`
   background-size: cover;
   padding-bottom: 120px;
   border-bottom-right-radius: 120px;
-  background-color: ${props => props.theme.palette.primary.main  }
+  background-color: ${props => props.theme.palette.primary.main};
 `
 
 const containerStyles = {
@@ -56,14 +55,14 @@ const Comment = styled.div`
   text-align: right;
 `
 
-
 const HomeSection = ({ id, theme }: ISectionProps) => {
-  return (<StyledHomeSection id={id} theme={theme}>
+  return (
+    <StyledHomeSection id={id} theme={theme}>
       <Container sx={containerStyles}>
-        <HorizontalLines color='white'/>
+        <HorizontalLines color="white" />
         <DescriptionSection>
-          БАЛЧУГ: Торговый портал - это современный инструмент 
-          для повышения эффективности управления процессами торгового предприятия.
+          БАЛЧУГ: Торговый портал - это современный инструмент для повышения
+          эффективности управления процессами торгового предприятия.
         </DescriptionSection>
         <FeatureList>
           <ul>
@@ -75,15 +74,16 @@ const HomeSection = ({ id, theme }: ISectionProps) => {
           </ul>
         </FeatureList>
         <AdditionalFeatures>
-           И другие функции программы позволят в комплексе автоматизировать задачи управленческого учета, анализа и планирования
+          И другие функции программы позволят в комплексе автоматизировать
+          задачи управленческого учета, анализа и планирования
         </AdditionalFeatures>
         <Comment>
-          Программа разработана с использованием «1С:Библитека стандартных подсистем»
+          Программа разработана с использованием «1С:Библитека стандартных
+          подсистем»
         </Comment>
       </Container>
-    </StyledHomeSection>)
+    </StyledHomeSection>
+  )
 }
-
-
 
 export default HomeSection
