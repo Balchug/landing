@@ -1,9 +1,8 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
-import { HorizontalLines , SectionTitle } from '~/shared/ui'
+import { SectionTitle } from '~/shared/ui'
 import TariffCard from './tariffCard'
 
 const StyledHomeSection = styled.section`
@@ -13,7 +12,7 @@ const StyledHomeSection = styled.section`
   background-size: cover; */
   padding-bottom: 120px;
   /* border-bottom-right-radius: 120px; */
-  background-color: ${props => props.theme.palette.primary.main  }
+  background-color: ${props => props.theme.palette.primary.main};
 `
 
 const containerStyles = {
@@ -22,48 +21,47 @@ const containerStyles = {
   gap: '10px',
   height: '100%',
   paddingTop: '30px',
-  
 }
 
 const tariffs = [
   {
-  title: 'БАЛЧУГ: Торговый портал (до 5 пользователей)', 
-  content: [
-      '70000руб. за 6 месяцев',
-      '120000руб. за 12 месяцев', 
-      ]},
+    title: 'БАЛЧУГ: Торговый портал (до 5 пользователей)',
+    content: ['70000руб. за 6 месяцев', '120000руб. за 12 месяцев'],
+  },
   {
-    title: 'БАЛЧУГ: Торговый портал (от 5 пользователей)', 
+    title: 'БАЛЧУГ: Торговый портал (от 5 пользователей)',
     content: [
       '70000руб. +1000руб. (за каждого дополнительного пользователя) за 6 месяцев',
       '120000руб. +1000руб. (за каждого дополнительного пользователя) за 12 месяцев',
-    ]              
-  }
-
+    ],
+  },
 ]
 
 const CardsWrapper = styled.div`
   display: flex;
   margin-top: 30px;
   flex-direction: row;
-  justify-content:  center;
+  justify-content: center;
   gap: 40px;
 `
 
 const TariffsSection = ({ id, theme }: ISectionProps) => {
-  return (<StyledHomeSection id={id} theme={theme}>
+  return (
+    <StyledHomeSection id={id} theme={theme}>
       <Container sx={containerStyles}>
-      
         <SectionTitle color="white">Тарифы</SectionTitle>
         <CardsWrapper>
-          { tariffs.map(tariff => (
-            <TariffCard title={tariff.title} content={tariff.content} />
+          {tariffs.map((tariff, idx) => (
+            <TariffCard
+              title={tariff.title}
+              content={tariff.content}
+              key={idx}
+            />
           ))}
         </CardsWrapper>
       </Container>
-    </StyledHomeSection>)
+    </StyledHomeSection>
+  )
 }
-
-
 
 export default TariffsSection

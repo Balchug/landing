@@ -28,7 +28,7 @@ const Logo = () => (
       height={ 33 }
     />
     <StyledTitle>
-     { 'БАЛЧУГ: ТОРГОВЫЙ ПОРТАЛ' }
+      { 'БАЛЧУГ: ТОРГОВЫЙ ПОРТАЛ' }
     </StyledTitle>
   </StyledWrapper>
   
