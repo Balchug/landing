@@ -26,9 +26,9 @@ const StyledUl = styled.ul`
   color: ${props => props.theme.palette.primary.main};
   font-size: 1.7rem;
   font-weight: 600;
-  background-image: url(logoLarge.svg);
+  background-image: url(logoLarge.jpg);
   background-repeat: no-repeat;
-  background-size: 20%;
+  background-size: 13%;
   background-position: right 15% bottom 50%;
 `
 
