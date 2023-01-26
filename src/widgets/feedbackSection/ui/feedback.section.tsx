@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
