@@ -43,7 +43,7 @@ const TariffCard = ({title, content}: IProps) => {
     <Title>{title}</Title>
     <Content>
       <ul>
-        {content.map(i => <StyledLi>{i}</StyledLi>)}
+        {content.map(i => <StyledLi key={i}>{i}</StyledLi>)}
       </ul>
     </Content>
   </CardWrapper>

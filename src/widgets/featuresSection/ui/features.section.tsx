@@ -81,7 +81,7 @@ const HomeSection = ({ id, theme }: ISectionProps) => {
         </Carousel>
         <FeaturesWrapper>
           {features.map(block => (
-            <Card sx={{ width: '250px' }}>
+            <Card sx={{ width: '250px' }} key={block.title}>
               <CardContent>
                 <Typography
                   variant="h5"

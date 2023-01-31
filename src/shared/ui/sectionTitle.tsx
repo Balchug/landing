@@ -18,7 +18,6 @@ const StyledWrapper = styled.div`
 
 const SectionTitle = ({children, color}: IProps) => {
   const theme = useTheme()
-  console.log('theme: ', theme)  
   return (
     <StyledWrapper theme={theme} color={color}>
         { children }

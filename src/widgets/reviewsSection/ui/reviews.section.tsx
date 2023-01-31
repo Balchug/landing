@@ -68,7 +68,7 @@ const ReviewsSection = ({ id, theme }: ISectionProps) => {
         <SectionTitle>Отзывы</SectionTitle>
           <ReviewsWrapper>
 
-            { reviews.map(item => <CardWrapper theme={theme}>
+            { reviews.map(item => <CardWrapper theme={theme} key={item.id}>
               <Title>{item.title}</Title>
               <Content>{item.content}</Content>
             </CardWrapper>) }

@@ -4,6 +4,7 @@ import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
 import { SectionTitle } from '~/shared/ui'
 import TariffCard from './tariffCard'
+import { title } from 'process'
 
 const StyledHomeSection = styled.section`
   /* background-image: url(patternBG.png); */
@@ -51,11 +52,11 @@ const TariffsSection = ({ id, theme }: ISectionProps) => {
       <Container sx={containerStyles}>
         <SectionTitle color="white">Тарифы</SectionTitle>
         <CardsWrapper>
-          {tariffs.map((tariff, idx) => (
+          {tariffs.map((tariff) => (
             <TariffCard
               title={tariff.title}
               content={tariff.content}
-              key={idx}
+              key={tariff.title}
             />
           ))}
         </CardsWrapper>

@@ -13,13 +13,13 @@ const StyledForm = styled.form`
 const FeedbackForm = () => {
   const formik = useFormik({
     initialValues: {
-      name: null,
-      email: null,
-      phone: null,
-      message: null,
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
     },
     onSubmit: _values => {
-      alert('Cообщение не отправлено!')
+      alert(`Cообщение не отправлено! ${JSON.stringify(_values) }`)
     },
   })
   return (
