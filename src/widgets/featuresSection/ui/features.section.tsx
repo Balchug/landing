@@ -61,7 +61,7 @@ const HomeSection = ({ id, theme }: ISectionProps) => {
       <Container sx={containerStyles}>
         {/* <HorizontalLines color={ theme?.palette.primary.main || 'transparent' }/> */}
         <SectionTitle>Возможности</SectionTitle>
-        <Carousel autoPlay={true} infiniteLoop={true}>
+        <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}>
           <StaticImage src={`../../../images/features/01.JPG`} alt="Описание" />
           <StaticImage src={`../../../images/features/02.JPG`} alt="Описание" />
           <StaticImage src={`../../../images/features/03.JPG`} alt="Описание" />
