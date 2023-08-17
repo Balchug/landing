@@ -47,8 +47,7 @@ const AboutSection = ({ id, theme }: ISectionProps) => {
           части разработки и интеграции новых решений
         </StyledP>
         <StyledP>
-          Мы используем современные технологии, а именно 1c, Bitrix, MS SQL, SQL
-          Analysis Services, Postgresql
+          Мы используем современные технологии, а именно 1c, Postgresql
         </StyledP>
         <StyledP>
           <b>Наша цель</b> - предоставить нашим клиентам эффективные решения для
