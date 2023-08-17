@@ -20,6 +20,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.16",
     "@mui/styled-engine-sc": "^5.10.14",
+    "deepmerge": "^4.3.1",
     "formik": "^2.2.9",
     "gatsby": "^5.2.0",
     "gatsby-omni-font-loader": "^2.0.2",
