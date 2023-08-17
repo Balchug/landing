@@ -31,8 +31,8 @@ const CardWrapper = styled.div`
   gap: 10px;
   border: 3px solid ${props => props.theme.palette.primary.main};
   border-radius: 15px;
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 800px;
+  max-width: 800px;
   min-height: 400px;
   margin: 10px;
   align-content: center;
