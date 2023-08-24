@@ -4,12 +4,12 @@ import {
   Header,
   Footer,
   HomeSection,
-  FeaturesSection,
+  ProductSection,
   TariffsSection,
-  ServicesSection,
   ReviewsSection,
   FeedbackSection,
   AboutSection,
+  CompamyTitleSection,
 } from '~/widgets'
 
 import { useTheme } from '@mui/material'
@@ -19,15 +19,13 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <Header />
-      <HomeSection id="home" theme={theme} />
-      <FeaturesSection id="functions" />
-      <ServicesSection id="services" theme={theme} />
+      <CompamyTitleSection id="title" theme={theme} />
+      <AboutSection id="about" theme={theme} />
+      <HomeSection theme={theme} />
+      <ProductSection id="product" theme={theme} />
       <ReviewsSection id="reviews" theme={theme} />
       <TariffsSection id="tariffs" theme={theme} />
-
-      <AboutSection id="about" theme={theme} />
       <FeedbackSection id="feedback" theme={theme} />
-
       <Footer />
     </>
   )
@@ -35,4 +33,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Балчуг-Тeх | Портал </title>
+export const Head: HeadFC = () => <title>Балчуг-Тeх</title>
