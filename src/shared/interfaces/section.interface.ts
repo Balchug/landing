@@ -1,6 +1,6 @@
 import { Theme } from '@mui/material'
 
 export interface ISectionProps {
-  id: string
+  id?: string
   theme?: Theme
 }

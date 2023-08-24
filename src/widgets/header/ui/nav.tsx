@@ -3,11 +3,9 @@ import styled from 'styled-components'
 import { Link } from 'react-scroll'
 
 const sections = [
-  { url: 'home', text: 'Продукт' },
-  { url: 'functions', text: 'Возможности' },
-  { url: 'services', text: 'Услуги' },
-  { url: 'tariffs', text: 'Тарифы' },
   { url: 'about', text: 'О Нас' },
+  { url: 'product', text: 'Наши разработки' },
+  { url: 'tariffs', text: 'Тарифы' },
 ]
 
 const StyledLink = styled(Link)`

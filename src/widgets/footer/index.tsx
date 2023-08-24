@@ -37,7 +37,7 @@ const Footer = () => {
     <StyledFooter theme={theme}>
       <Container sx={containerStyles}>
         <WrapperRow>
-          <SectionTitle color="white">БАЛЧУГ: ТОРГОВЫЙ ПОРТАЛ</SectionTitle>
+          <SectionTitle color="white">БАЛЧУГ-ТЕХ</SectionTitle>
           <Contacts />
         </WrapperRow>
         <Copyright>© Все права защищены. ООО «Балчуг Тех» ® 2022</Copyright>

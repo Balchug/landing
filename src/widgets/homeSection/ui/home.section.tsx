@@ -2,85 +2,99 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
-import { HorizontalLines } from '~/shared/ui'
-
+import { StaticImage } from 'gatsby-plugin-image'
 
 const StyledHomeSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   background-image: url(patternBG.png);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
-  padding-bottom: 120px;
+  padding-bottom: 30px;
+  min-height: 900px;
   border-bottom-right-radius: 120px;
   background-color: ${props => props.theme.palette.primary.main};
 `
 
 const containerStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '10px',
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gap: '20px',
   height: '100%',
+  justifyContent: 'space-evenly',
+
+  padding: '50px 25px',
 }
 
-const DescriptionSection = styled.div`
-  align-self: end;
-  max-width: 43%;
-  color: #939598;
-  font-size: 1.3rem;
-  font-weight: 800;
-  text-align: right;
+const imageStyles = {
+  borderRadius: '10px',
+  filter: 'saturate(0.5)',
+  padding: '25px 25px',
+  margin: '25px',
+}
+
+const DescriptionWrapper = styled.div`
+  padding: 30px;
+  align-self: center;
 `
 
-const FeatureList = styled.div`
-  align-self: start;
-  max-width: 100%;
+const DescriptionTitle = styled.div`
+  font-size: 30px;
+  line-height: 28px;
   color: white;
-  font-size: 1.7rem;
   font-weight: 600;
 `
-const AdditionalFeatures = styled.div`
-  align-self: end;
-  max-width: 70%;
+
+const Description = styled.div`
+  margin-top: 20px;
   color: white;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-align: right;
-`
-const Comment = styled.div`
-  align-self: end;
-  max-width: 60%;
-  color: white;
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: right;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
 `
 
-const HomeSection = ({ id, theme }: ISectionProps) => {
+const HomeSection = ({ theme }: ISectionProps) => {
   return (
-    <StyledHomeSection id={id} theme={theme}>
+    <StyledHomeSection theme={theme}>
       <Container sx={containerStyles}>
-        <HorizontalLines color="white" />
-        <DescriptionSection>
-          БАЛЧУГ: Торговый портал - это современный инструмент для повышения
-          эффективности управления процессами торгового предприятия.
-        </DescriptionSection>
-        <FeatureList>
-          <ul>
-            <li>Планирование</li>
-            <li>Листинг</li>
-            <li>Маркетинг</li>
-            <li>Ценообразование</li>
-            <li>Управленческие отчеты</li>
-          </ul>
-        </FeatureList>
-        <AdditionalFeatures>
-          И другие функции программы позволят в комплексе автоматизировать
-          задачи управленческого учета, анализа и планирования
-        </AdditionalFeatures>
-        <Comment>
-          Программа разработана с использованием «1С:Библитека стандартных
-          подсистем»
-        </Comment>
+        <StaticImage
+          alt="img_1"
+          src="../../../images/img_1.webp"
+          width={400}
+          style={imageStyles}
+        />
+        <DescriptionWrapper>
+          <DescriptionTitle>
+            Максимизируйте влияние на бизнес с помощью передовых технологий
+          </DescriptionTitle>
+          <Description>
+            Интегрируя платформу «1С:Предприятие», наши квалифицированные
+            специалисты создают качественное программное обеспечение для
+            оптимизации ваших процессов, снижения затрат и повышения
+            эффективности.
+          </Description>
+        </DescriptionWrapper>
+      </Container>
+      <Container sx={containerStyles}>
+        <DescriptionWrapper>
+          <DescriptionTitle>
+            Индивидуально разработанные решения для продвижения вашего бизнеса
+            вперед
+          </DescriptionTitle>
+          <Description>
+            Команда Балчуг-Тех гарантирует, что наши клиенты не согласятся на
+            меньшее. Мы предоставляет инновационное и функциональное
+            коммерческое программное обеспечение, не имеющее аналогов.
+          </Description>
+        </DescriptionWrapper>
+        <StaticImage
+          alt="img_1"
+          src="../../../images/img_2.webp"
+          width={400}
+          style={imageStyles}
+        />
       </Container>
     </StyledHomeSection>
   )
