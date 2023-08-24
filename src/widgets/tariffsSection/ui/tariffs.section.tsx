@@ -4,7 +4,6 @@ import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
 import { SectionTitle } from '~/shared/ui'
 import TariffCard from './tariffCard'
-import { title } from 'process'
 
 const StyledHomeSection = styled.section`
   /* background-image: url(patternBG.png); */
@@ -32,7 +31,12 @@ const tariffs = [
   {
     title: 'БАЛЧУГ: Торговый портал (от 10 пользователей)',
     content: [
-      '300 000 руб. + 15 000 руб. (за каждого дополнительного пользователя) в месяц'],
+      '300 000 руб. + 15 000 руб. (за каждого дополнительного пользователя) в месяц',
+    ],
+  },
+  {
+    title: 'Проектирование и разработка уникальных решений для вашего бизнеса',
+    content: ['Стоимость обсуждается индивидуально'],
   },
 ]
 
@@ -41,6 +45,7 @@ const CardsWrapper = styled.div`
   margin-top: 30px;
   flex-direction: row;
   justify-content: center;
+
   gap: 40px;
 `
 
@@ -50,7 +55,7 @@ const TariffsSection = ({ id, theme }: ISectionProps) => {
       <Container sx={containerStyles}>
         <SectionTitle color="white">Тарифы</SectionTitle>
         <CardsWrapper>
-          {tariffs.map((tariff) => (
+          {tariffs.map(tariff => (
             <TariffCard
               title={tariff.title}
               content={tariff.content}
