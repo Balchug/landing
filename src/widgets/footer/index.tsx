@@ -37,10 +37,15 @@ const Footer = () => {
     <StyledFooter theme={theme}>
       <Container sx={containerStyles}>
         <WrapperRow>
-          <SectionTitle color="white">БАЛЧУГ-ТЕХ</SectionTitle>
+          <div>
+            <SectionTitle color="white">БАЛЧУГ-ТЕХ</SectionTitle>
+            <span>ИНН: 9705181987</span>
+          </div>
           <Contacts />
         </WrapperRow>
-        <Copyright>© Все права защищены. ООО «Балчуг Тех» ® 2022</Copyright>
+        <Copyright>
+          © Все права защищены. ООО «Балчуг Тех» ® {new Date().getFullYear()}
+        </Copyright>
       </Container>
     </StyledFooter>
   )
