@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import reviews from './reviews'
@@ -13,7 +12,7 @@ const StyledSection = styled.section`
   background-size: cover; */
   padding-bottom: 40px;
   /* border-bottom-right-radius: 120px; */
-  /* background-color: ${props => props.theme.palette.primary.main  } */
+  /* background-color: ${props => props.theme.palette.primary.main} */
 `
 
 const containerStyles = {
@@ -60,27 +59,22 @@ const Content = styled.div`
   text-align: justify;
 `
 
-
-
 const ReviewsSection = ({ id, theme }: ISectionProps) => {
-  return (<StyledSection id={id} theme={theme}>
+  return (
+    <StyledSection id={id} theme={theme}>
       <Container sx={containerStyles}>
         <SectionTitle>Отзывы</SectionTitle>
-          <ReviewsWrapper>
-
-            { reviews.map(item => <CardWrapper theme={theme} key={item.id}>
+        <ReviewsWrapper>
+          {reviews.map(item => (
+            <CardWrapper theme={theme} key={item.id}>
               <Title>{item.title}</Title>
               <Content>{item.content}</Content>
-            </CardWrapper>) }
-          </ReviewsWrapper>
-        
-          
-          
+            </CardWrapper>
+          ))}
+        </ReviewsWrapper>
       </Container>
-    </StyledSection>)
+    </StyledSection>
+  )
 }
 
-
-
 export default ReviewsSection
- 
