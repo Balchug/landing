@@ -4,6 +4,7 @@ import { Link } from 'react-scroll'
 
 const sections = [
   { url: 'about', text: 'О Нас' },
+  { url: 'stack', text: 'Технологии' },
   { url: 'product', text: 'Наши разработки' },
   { url: 'tariffs', text: 'Тарифы' },
 ]
