@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Container } from '@mui/material'
 import { ISectionProps } from '~/shared/interfaces/section.interface'
 import { SectionTitle } from '~/shared/ui'
+import Accreditation from './accreditation'
 
 const StyledSection = styled.section`
   /* background-image: url(patternBG.png); */
@@ -68,6 +69,7 @@ const AboutSection = ({ id, theme }: ISectionProps) => {
           NodeJS, ReactJS, Flutter и другие современные фреймворки. Мы стремимся
           к постоянному развитию и инновациям в нашей работе.
         </StyledP>
+        <Accreditation />
       </Container>
     </StyledSection>
   )
